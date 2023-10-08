@@ -1,18 +1,9 @@
 REM make download folder and download background picture
 GUI R
 DELAY 100
-STRING cmd
-ENTER
-DELAY 1000
-STRING mkdir c:\t3mp
-DELAY 150
-ENTER
-DELAY 150
-STRING curl -o c:\t3mp\haha.jpg https://raw.githubusercontent.com/ThatDeadGuy/Nug/main/haha.jpg
+STRING cmd.exe /c "mkdir c:\tmep & curl -o c:\tmep\haha.jpg https://raw.githubusercontent.com/ThatDeadGuy/Nug/main/haha.jpg"
 DELAY 100
 ENTER
-DELAY 1000
-ALT F4
 
 REM Set the new background picture
 GUI s
